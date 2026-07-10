@@ -373,3 +373,5 @@ Recommended narrative arc for a combined brochure:
 4. Proof points — dashboards, forecasts, savings, compliance (screenshots)
 5. Call to action
 
+   Contact vayurays@gmail.com for free trial
+
