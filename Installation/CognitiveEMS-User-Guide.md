@@ -425,8 +425,8 @@ Change a user's role directly from the **Role** dropdown in their row (Admin / O
 | **Formula meter** | A virtual meter whose value is calculated from other meters |
 | **SCADA** | The plant control system that provides live meter readings (via VayuRays) |
 
-| Cognitive EMS Installer
+ Cognitive EMS Installer
 https://drive.google.com/file/d/1IXFtc26hgzmnuMTMOXoJlS-vfhp2yMuH/view?usp=drive_link
 
-| VAyurays Installer.
+ Vayurays Installer.
 https://drive.google.com/file/d/1zpSzZZGY0iZ7VjZZvpDyrMTTlqsH5ylo/view?usp=drive_link
