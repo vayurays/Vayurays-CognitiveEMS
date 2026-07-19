@@ -32,7 +32,7 @@
 8. [Common Tasks (How Do I…?)](#8-common-tasks-how-do-i)
 9. [Tips & Troubleshooting](#9-tips--troubleshooting)
 10. [Glossary](#10-glossary)
-11. Cognitive EMS Installer(https://drive.google.com/file/d/1IXFtc26hgzmnuMTMOXoJlS-vfhp2yMuH/view?usp=drive_link)
+11. Cognitive EMS Installer(https://drive.google.com/file/d/1AFXZkaz8ymwI55q0ApHQ-YedvFQqHaHV/view?usp=drive_link)
 12. Vayurays Installer (https://drive.google.com/file/d/1zpSzZZGY0iZ7VjZZvpDyrMTTlqsH5ylo/view?usp=drive_link)
 ---
 
@@ -427,7 +427,7 @@ Change a user's role directly from the **Role** dropdown in their row (Admin / O
 | **SCADA** | The plant control system that provides live meter readings (via VayuRays) |
 
  Cognitive EMS Installer
-https://drive.google.com/file/d/1IXFtc26hgzmnuMTMOXoJlS-vfhp2yMuH/view?usp=drive_link
+ https://drive.google.com/file/d/1AFXZkaz8ymwI55q0ApHQ-YedvFQqHaHV/view?usp=drive_link
 
  Vayurays Installer.
 https://drive.google.com/file/d/1zpSzZZGY0iZ7VjZZvpDyrMTTlqsH5ylo/view?usp=drive_link
