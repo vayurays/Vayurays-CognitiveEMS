@@ -223,124 +223,106 @@ A polished, modern interface with full light and dark theme support means the sa
 ### Tagline Options
 
 - *"Every reading, captured. Every device, watched."*
-- *"The reliable foundation beneath smarter energy decisions."*
-- *"Set it up once. Trust it forever."*
+- *"The multi-protocol, fail-safe foundation beneath smarter energy decisions."*
+- *"Set it up once. Host your custom apps. Trust it forever."*
 
 ### Positioning Statement
 
-VayuRays is a dependable, always-on data acquisition system for Building Management and industrial control networks. It automatically finds equipment on the network, lets operators choose exactly what to monitor, and continuously and reliably captures readings — providing the clean, trustworthy data foundation that any energy analytics or optimization platform (including CognitiveEMS) depends on.
+VayuRays is a robust, enterprise-grade data acquisition system and extensible application host for industrial networks and building management systems. It natively supports standard protocols (BACnet & Modbus) to auto-discover network devices, offers dual polling modes (Frequency & Change-of-Value), prevents network storms via advanced circuit breakers, and serves as a plug-and-play host for custom backend and frontend web applications — providing a unified, secure, and auditable foundation for utility management.
 
 ### Target Audience
 
 - BMS / Building Automation engineers
-- Facility operations teams
-- Industrial controls & instrumentation teams
-- Energy platform integrators needing a reliable acquisition layer
+- Facility managers & industrial ops teams
+- Systems integrators looking for an extensible data acquisition layer
+- Security & compliance teams requiring complete audit logs and role-based access
 
 ---
 
-### Feature 1 — Automatic Device Discovery
+### Feature 1 — Multi-Protocol Automatic Device Discovery
 
-VayuRays scans the network and automatically discovers every compatible building or plant device — no manual point-by-point setup required to get started.
+VayuRays scans building networks to auto-discover devices across four industry-standard protocols, completely eliminating manual point-by-point setup.
 
 **Key benefits**
-- Faster commissioning, less manual configuration
-- Nothing on the network gets overlooked
-- Works with industry-standard building automation protocols
+- **Broad Protocol Support:** Natively speaks BACnet/IP, BACnet MS/TP (serial RS-485), Modbus TCP, and Modbus RTU.
+- **Plug-and-Play Setup:** Commission networks in minutes instead of days.
+- **Central Device Registry:** Auto-resolves and maintains device addresses dynamically.
 
 ---
 
-### Feature 2 — Operator-Controlled Point Selection
+### Feature 2 — Advanced Acquisition Modes (COV & Frequency-Based Polling)
 
-Once devices are discovered, operators choose exactly which data points matter — and configure how often (or under what conditions) each one is recorded.
+Define exactly how each point is logged to optimize database storage and capture critical transitions.
 
 **Key benefits**
-- Full control over what data is collected and why
-- Flexible recording: on a schedule, or only when a value actually changes
-- Avoids data overload — capture signal, not noise
-
-![VayuRays Device / Points Configuration](./images/VayuRaysPointsDatabase.png)
-*Device discovery and point configuration screen.*
+- **Frequency-Based Polling:** Poll points at custom intervals (minimum 1 second base cycle up to 900 seconds).
+- **Change-of-Value (COV) Logging:** Read values continuously but only write records to database history on value change.
+- **Smart Data Deduplication:** Native validation prevents writing duplicate active history records.
 
 ---
 
-### Feature 3 — Always-On, Unattended Collection
+### Feature 3 — Always-On Loop with Pluggable Drivers
 
-VayuRays runs continuously in the background as a system service — collecting data around the clock without requiring an operator to keep an application open or babysit the process.
+Runs as a lightweight background Windows Service, utilizing an extensible provider architecture that isolates communication logic.
 
 **Key benefits**
-- True 24/7 reliability, independent of user sessions
-- Consistent, precisely-timed recording intervals
-- Minimal IT overhead to keep running
+- **Independent Reliability:** 24/7 background operation unaffected by user login sessions.
+- **Extensible Drivers:** Pluggable drivers (`IProtocolDriver` and `ProtocolDriverManager`) allow adding new protocols without core codebase changes.
+- **Resource Efficient:** High concurrency handling with customizable batching (e.g., ReadPropertyMultiple batching for BACnet).
 
 ---
 
-### Feature 4 — Live Communication Health Monitoring
+### Feature 4 — Communication Health & Fail-Safe Circuit Breaker
 
-The moment a device stops responding, VayuRays flags it visually — and automatically clears the flag the instant communication is restored. No silent data gaps go unnoticed.
+VayuRays features visual network monitoring combined with a smart circuit breaker to isolate failures.
 
 **Key benefits**
-- Immediate visibility into network/device issues
-- Self-clearing status means no manual reset needed
-- Confidence that "no data" is never mistaken for "no problem"
+- **Self-Healing Indicators:** Instantly flags communication errors per point and clears them once resolved.
+- **Cascading Failure Protection:** Built-in circuit breakers isolate slow or dead controllers after a configurable error threshold, preventing network retry storms.
+- **Filtered Log Spam:** Warns about undiscovered devices once per device instead of flooding system logs.
 
 ---
 
-### Feature 5 — Live History, Trends & Charting
+### Feature 5 — Custom App Extensibility Framework
 
-Every monitored point has a live, auto-updating table and trend chart, so operators can watch current behavior and explore historical patterns side by side.
+VayuRays acts as a secure, lightweight application host. Developers can drop custom backend DLLs and frontend React assets directly into the service.
 
 **Key benefits**
-- Instant visual feedback on equipment behavior
-- Date-range filtering for focused historical review
-- No separate reporting tool required for a quick look-back
-
-![VayuRays Live History & Chart](./images/VayuRaysMeterDiscovery.png)
-*Live history table and trend chart with date-range filtering.*
+- **Zero-Configuration App Discovery:** Backend controllers are dynamically loaded, and frontend apps are automatically served at `/apps/{Plugin}` and rendered inside the main UI.
+- **Shared Dependency Pipeline:** Plugins inherit host DI containers (`VayuDbContext`, `ILiveValuePublisher`, loggers) and automatically inherit JWT authentication pipelines.
+- **Seamless Frontend Mounting:** Custom apps render inside the sidebar in protected `iframe` elements, with JWT tokens passed automatically.
 
 ---
 
-### Feature 6 — One-Click Data Export
+### Feature 6 — Point-Level Alarm Rules & Bulk Acknowledge-All
 
-Any point's history, for any date range, can be exported instantly — ready to hand to an analyst, auditor, or another system.
+Configure flexible rule definitions directly on analog, binary, or multi-state values.
 
 **Key benefits**
-- Removes friction from ad hoc reporting requests
-- Supports compliance and audit documentation
-- Clean, ready-to-use exported data
+- **Condition Matching:** Supports greater-than, less-than, equal-to, not-equal-to, and boolean check rules.
+- **Visual Modal Configuration:** Manage rules locally in a batch grid with easy save-all modifications.
+- **Single-Click Bulk Acknowledgement:** Clean up active alarms and RTN-acknowledge resolved alarms in a single click per point.
 
 ---
 
-### Feature 7 — Time-Zone-Aware Reporting
+### Feature 7 — Cryptographically Signed Security Audit Logging
 
-Readings are always captured on a single, consistent internal clock, then displayed and exported in whatever local time zone the site operates in — critical for multi-site organizations.
+Track every critical system interaction to satisfy regulatory compliance requirements.
 
 **Key benefits**
-- Accurate, consistent data across multiple sites/regions
-- No confusion when comparing timestamps across locations
-- One configuration, correct everywhere
+- **Full Traceability:** Logs every rule creation, rule edit, rule delete, write command, and settings modification.
+- **Tamper-Evident Signatures:** Uses cryptographic signatures to verify that logs have not been modified externally.
+- **Timezone-Aware Reporting:** UI displays logs in the system's configured timezone, and exports matching timezone-corrected CSV reports.
 
 ---
 
-### Feature 8 — Transparent System Activity Logging
+### Feature 8 — Enterprise-Grade Access Control & Hardened Licensing
 
-A live, filterable activity log lets technical teams see exactly what the system is doing at any moment — supporting fast troubleshooting and operational confidence.
-
-**Key benefits**
-- Full transparency into day-to-day system operation
-- Faster diagnosis when something needs attention
-- Builds operator trust in an unattended system
-
----
-
-### Feature 9 — Modern, Crisp Desktop Experience
-
-The configuration and monitoring application is built for today's high-resolution displays, staying sharp and readable on everything from a laptop to a large control-room monitor.
+Protect critical configurations from unauthorized changes and enforce license compliance.
 
 **Key benefits**
-- Comfortable for extended monitoring sessions
-- Professional appearance for control rooms and site visits
-- Consistent experience across different hardware
+- **API-Enforced Role Restrictions:** Restricts all POST/PUT/DELETE write operations strictly to `Administrator` and `Operator` roles—completely blocking read-only `Viewer` users from Postman/API level tampering.
+- **Machine-Bound Licensing:** Validates Host ID, expiration dates, and point limits using native decryption utilities.
 
 ---
 
@@ -348,11 +330,13 @@ The configuration and monitoring application is built for today's high-resolutio
 
 | Outcome | How VayuRays Delivers |
 |---|---|
-| Reliable data foundation | Always-on, unattended, scheduled collection |
-| Faster issue detection | Real-time communication health monitoring |
-| Lower commissioning effort | Automatic device discovery |
-| Audit-ready reporting | One-click, time-zone-correct CSV export |
-| Multi-site consistency | Centralized storage, time-zone-aware display |
+| Pluggable Ecosystem | Drop in custom apps (backend controllers + React frontends) that load dynamically |
+| Cascading Error Defense | Per-device circuit breakers isolate slow or dead equipment to protect polling cycles |
+| Multi-Protocol Compatibility | Connects BACnet/IP, BACnet MS/TP, Modbus TCP, and Modbus RTU devices |
+| High-Fidelity Data Logging | Frequency-based and Change-Of-Value acquisition modes to capture clear telemetry |
+| Compliance Auditing | Cryptographically signed Security Audit Logs tracking configuration changes |
+| Hardened API Security | Strict API-level role validation preventing read-only Viewers from posting modifications |
+| Quick Troubleshooting | Single-click Point Alarm Ack & Clear, live comm health flags, and timezone-aware displays |
 
 ---
 
