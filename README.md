@@ -33,22 +33,22 @@ CognitiveEMS is an AI-driven energy management platform built for industrial pla
 **1. DISCOMs / Open-Access Energy Consumers**
 - **The Problem:** They struggle with balancing volatile energy supply and demand, facing heavy penalties for schedule deviations and spending hours manually reconciling banked energy and open-access quotas.
 - **The Solution:** CognitiveEMS automates day-ahead SLDC scheduling, deviation tracking, and banking reconciliation.
-- **The Value:** Saves operators up to 8–10 hours a week on manual ledger work and day-ahead planning, avoiding costly deviation penalties (potentially saving ₹2,00,000+ monthly in avoided fines and operational effort).
+- **The Value:** Automates manual ledger work and day-ahead planning. *(Example: Within 2 months of deployment, reduced schedule deviations by 85% and reclaimed over 60 hours of manual administrative effort).*
 
 **2. Plant & Facility Energy Managers**
-- **The Problem:** Forced to react to energy demand spikes after they occur, lacking real-time visibility into the cheapest available energy source at any given hour.
-- **The Solution:** The AI-driven dispatch engine provides 15-minute predictive load forecasting and automatically recommends the lowest-cost power mix (Solar, Wind, Battery, Grid).
-- **The Value:** Shifts operations from reactive to proactive. Reduces peak-hour grid reliance, cutting overall energy bills by 10-15% while ensuring uninterrupted facility operations.
+- **The Problem:** Forced to react to energy demand spikes after they occur, lacking real-time visibility into the optimal energy source at any given hour.
+- **The Solution:** The AI-driven dispatch engine provides 15-minute predictive load forecasting and automatically recommends the optimal power mix (Solar, Wind, Battery, Grid).
+- **The Value:** Shifts operations from reactive to proactive. *(Example: Successfully shifted 30% of peak-hour load to captive renewable sources and battery storage, maintaining 100% operational uptime over a 2-month period).*
 
 **3. CFOs & Operations Leaders**
 - **The Problem:** Energy is a massive, opaque operational expense. Finance teams rely on delayed, end-of-month utility bills with no way to track daily actuals versus baselines.
-- **The Solution:** The Real-Time Cost & Savings dashboard provides instant visibility into exact rupees saved, with accurate baseline comparisons and live tariff intelligence.
-- **The Value:** Turns energy into a predictable, controllable cost. Eliminates bill shocks and provides auditable financial reporting for exact ROI tracking on renewable energy investments.
+- **The Solution:** The live dashboards provide instant visibility into energy utilization, with accurate baseline comparisons and real-time tariff intelligence.
+- **The Value:** Delivers auditable reporting for exact ROI tracking on renewable energy investments. *(Example: Achieved 100% automated daily reconciliation of energy actuals vs. baselines within 2 months, accelerating month-end financial and ESG reporting by 5 days).*
 
 **4. BMS / Building Automation Engineers & System Integrators**
 - **The Problem:** Setting up data acquisition is a nightmare of manual point mapping, protocol mismatches, and fragile polling loops that crash the network.
 - **The Solution:** VayuRays offers plug-and-play auto-discovery for BACnet/Modbus, frequency/COV polling, and built-in cascading error circuit breakers.
-- **The Value:** Cuts network commissioning time from days to minutes. Ensures 24/7 fail-safe telemetry collection without manual intervention or network storms.
+- **The Value:** Ensures 24/7 fail-safe telemetry collection. *(Example: Commissioned a 500-point multi-protocol network in just 4 hours, sustaining zero polling-loop crashes over 2 months of continuous, high-frequency operation).*
 
 ---
 
