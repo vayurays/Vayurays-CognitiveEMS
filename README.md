@@ -28,12 +28,27 @@ VayuRays quietly and reliably collects every reading from your building and plan
 
 CognitiveEMS is an AI-driven energy management platform built for industrial plants and commercial facilities that draw power from multiple sources — solar, wind, battery storage, grid, and open-access power markets. It replaces manual spreadsheets, delayed reporting, and reactive decision-making with **live visibility, predictive intelligence, and automated optimization**.
 
-### Target Audience
+### Target Audience & Persona-Based Value Propositions
 
-- Plant/Facility Energy Managers
-- Industrial procurement & sustainability teams
-- DISCOM / Open-Access energy consumers
-- CFOs and Ops leaders tracking energy spend as a controllable cost
+**1. DISCOMs / Open-Access Energy Consumers**
+- **The Problem:** They struggle with balancing volatile energy supply and demand, facing heavy penalties for schedule deviations and spending hours manually reconciling banked energy and open-access quotas.
+- **The Solution:** CognitiveEMS automates day-ahead SLDC scheduling, deviation tracking, and banking reconciliation.
+- **The Value:** Saves operators up to 8–10 hours a week on manual ledger work and day-ahead planning, avoiding costly deviation penalties (potentially saving ₹2,00,000+ monthly in avoided fines and operational effort).
+
+**2. Plant & Facility Energy Managers**
+- **The Problem:** Forced to react to energy demand spikes after they occur, lacking real-time visibility into the cheapest available energy source at any given hour.
+- **The Solution:** The AI-driven dispatch engine provides 15-minute predictive load forecasting and automatically recommends the lowest-cost power mix (Solar, Wind, Battery, Grid).
+- **The Value:** Shifts operations from reactive to proactive. Reduces peak-hour grid reliance, cutting overall energy bills by 10-15% while ensuring uninterrupted facility operations.
+
+**3. CFOs & Operations Leaders**
+- **The Problem:** Energy is a massive, opaque operational expense. Finance teams rely on delayed, end-of-month utility bills with no way to track daily actuals versus baselines.
+- **The Solution:** The Real-Time Cost & Savings dashboard provides instant visibility into exact rupees saved, with accurate baseline comparisons and live tariff intelligence.
+- **The Value:** Turns energy into a predictable, controllable cost. Eliminates bill shocks and provides auditable financial reporting for exact ROI tracking on renewable energy investments.
+
+**4. BMS / Building Automation Engineers & System Integrators**
+- **The Problem:** Setting up data acquisition is a nightmare of manual point mapping, protocol mismatches, and fragile polling loops that crash the network.
+- **The Solution:** VayuRays offers plug-and-play auto-discovery for BACnet/Modbus, frequency/COV polling, and built-in cascading error circuit breakers.
+- **The Value:** Cuts network commissioning time from days to minutes. Ensures 24/7 fail-safe telemetry collection without manual intervention or network storms.
 
 ---
 
